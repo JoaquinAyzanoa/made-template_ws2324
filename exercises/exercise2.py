@@ -1,5 +1,5 @@
 import pandas as pd
-from sqlalchemy import create_engine
+import sqlalchemy as sql
 
 class pipeline():
 
@@ -40,9 +40,20 @@ class pipeline():
         self._df = self._df[self._df['IFOPT'].str.contains(pattern)]
 
     def create_sqldb(self):
-        engine = create_engine(f"sqlite:///{self._db_name}.sqlite", echo=False)
-        self._df.to_sql(self._table_name, con=engine, if_exists="replace", index=False)
-        return engine
+        engine = sql.create_engine(f"sqlite:///{self._db_name}.sqlite", echo=False)
+        dtype_mapping = {
+            'EVA_NR': sql.types.BIGINT, 
+            'DS100': sql.types.TEXT, 
+            'IFOPT': sql.types.TEXT, 
+            'NAME': sql.types.TEXT, 
+            'Verkehr': sql.types.TEXT,
+            'Laenge': sql.types.FLOAT, 
+            'Breite': sql.types.FLOAT, 
+            'Betreiber_Name': sql.types.TEXT,
+            'Betreiber_Nr': sql.types.BIGINT, 
+            }
+        self._df.to_sql(self._table_name, con=engine, if_exists="replace", index=False, dtype=dtype_mapping)
+
 
     def run(self):
         self.get_data()
@@ -59,4 +70,3 @@ if __name__ == '__main__':
     table_name = 'trainstops'
     pp = pipeline(db_url, db_name, table_name)
     df = pp.run()
-    print(df)
