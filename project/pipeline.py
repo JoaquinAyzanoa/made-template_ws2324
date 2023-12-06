@@ -126,4 +126,3 @@ if __name__ == '__main__':
     db_name_2 = 'airpollution'
     table_name_2 = 'airpollution'
     df2, db_dir2 = create_db_2()
-    
