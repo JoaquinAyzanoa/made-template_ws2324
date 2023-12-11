@@ -38,13 +38,19 @@ Annual parameters of air pollutants in Nordrhein-Westfalen for 2022: Nitrogen di
 1. Explore Datasources [#1][i1]
 2. Clean & Transform data [#2][i2]
 3. Build an Automated Data Pipeline [#3][i3]
-4. Deploy the Tests #4
-5. Explore and Analyze Resulting Data #5
-6. Improve Data Pipeline #6
-7. Report Findings #7
-8. Write Final Report and submit #8
-9. Submit the project #9
+4. Improve Data Pipeline [#4][i4]
+5. Deploy the Tests [#5][i5]
+6. Create libraries requirements [#6][i6]
+7. Continuous integration with Github actions [#7][i7]
+8. Explore and Analyze Resulting Data #8
+9. Report Findings #9
+10. Write Final Report and submit #10
+11. Submit the project #11
 
 [i1]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/6
 [i2]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/8
 [i3]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/11
+[i4]: https://github.com/JoaquinAyzanoa/made-template_ws2324/pull/14
+[i5]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/15
+[i6]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/19
+[i7]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/17
