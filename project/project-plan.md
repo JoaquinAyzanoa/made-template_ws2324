@@ -42,10 +42,9 @@ Annual parameters of air pollutants in Nordrhein-Westfalen for 2022: Nitrogen di
 5. Deploy the Tests [#5][i5]
 6. Create libraries requirements [#6][i6]
 7. Continuous integration with Github actions [#7][i7]
-8. Explore and Analyze Resulting Data #8
-9. Report Findings #9
-10. Write Final Report and submit #10
-11. Submit the project #11
+8. Explore and Analyze Resulting Data 
+9. Write Final Report and submit [#8][i8]
+10. Submit the project #10
 
 [i1]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/6
 [i2]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/8
@@ -54,3 +53,4 @@ Annual parameters of air pollutants in Nordrhein-Westfalen for 2022: Nitrogen di
 [i5]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/15
 [i6]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/19
 [i7]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/17
+[i8]: https://github.com/JoaquinAyzanoa/made-template_ws2324/issues/23
