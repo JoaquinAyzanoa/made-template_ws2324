@@ -11,7 +11,7 @@ Correlation between air pollution and number of vehicles with combustion motors 
 
 <!-- Describe your data science project in max. 200 words. Consider writing about why and how you attempt it. "XY is an important problem, because... This projects analyzes XY, using method A. The results can give insights into..."-->
 
-In analysis it helps to get a clear view of the amount of cars in the air pollution in the state of Nordrhein-Westfalen. This analysis also helps identify areas with a greater number of vehicles, which could potentially indicate a greater demand for services related to mechanical workshops and gasoline consumption. The resulting information may be relevant in a study that evaluates the number of vehicles a city can afford to have because high pollution can lead to a high rate of respiratory diseases.
+This analysis helps to get a clear picture of how many cars pollute the air in the state of North Rhine-Westphalia. This analysis also helps identify areas with a greater number of vehicles, which could potentially indicate a greater demand for services related to mechanical workshops and gasoline consumption. The resulting information may be relevant in a study that evaluates the number of vehicles a city can afford to have because high pollution can cause a high rate of respiratory diseases.
 
 ## Datasources
 
