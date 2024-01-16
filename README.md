@@ -26,3 +26,6 @@ Stock of motor vehicles by motor vehicle type of cities:   Köln,   Münster, De
 The final report can be found [here][i1]
 
 [i1]: https://github.com/JoaquinAyzanoa/made-template_ws2324/blob/main/project/report.ipynb
+
+## License
+Correlation between air pollution and number of vehicles with combustion motors in Nordrhein-Westfalen. © 2023 by Joaquin Ayzanoa is licensed under CC BY 4.0 
