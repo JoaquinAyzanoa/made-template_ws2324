@@ -23,5 +23,6 @@ Stock of motor vehicles by motor vehicle type of cities:   Köln,   Münster, De
 * Data Type: xlsx
 
 ## Final Report
-The final report can be find [here][i1].
+The final report can be find [here][i1]
+
 [i1]: https://github.com/JoaquinAyzanoa/made-template_ws2324/blob/main/project/report.ipynb
