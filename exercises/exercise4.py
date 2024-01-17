@@ -80,7 +80,7 @@ class DataPipeline:
         'Batterietemperatur': sql.types.FLOAT,
         'Geraet aktiv': sql.types.TEXT}
         #Create the sqlite database
-        engine = sql.create_engine(f"sqlite:///data/{self._db_name}.sqlite", echo=False)
+        engine = sql.create_engine(f"sqlite:///{self._db_name}.sqlite", echo=False)
         self._df.to_sql(self._table_name, con=engine, if_exists="replace", 
                         index=False, dtype = dtype_mapping)
         
