@@ -1,0 +1,85 @@
+valuetype ZoneType oftype integer {
+    constraints: [
+        ZoneValues,
+    ];
+}
+
+constraint ZoneValues oftype RangeConstraint {
+  lowerBound: 2001;
+  lowerBoundInclusive: true;
+  upperBound: 2001;
+  upperBoundInclusive: true;
+}
+
+valuetype CoordinatesType oftype decimal {
+    constraints: [
+        CoordinateValues,
+    ];
+}
+
+constraint CoordinateValues oftype RangeConstraint {
+  lowerBound: -90;
+  lowerBoundInclusive: true;
+  upperBound: 90; 
+  upperBoundInclusive: true;     
+}
+
+pipeline GTFSDataPipeline {
+
+    DataDownloader
+    -> ZipInterpreter
+    -> StopsFilePicker
+    -> TextInterpreter
+    -> TableInterpreter
+    -> TableColumnDeleter
+    -> GTFSTableInterpreter
+    -> GTFSLoader;
+
+    block DataDownloader  oftype HttpExtractor {
+        //Download zip
+        url: "https://gtfs.rhoenenergie-bus.de/GTFS.zip";
+    }
+
+    block ZipInterpreter oftype ArchiveInterpreter {
+        archiveType: "zip";
+    }
+
+    
+    block StopsFilePicker oftype FilePicker {
+        // pick the stops.txt file
+        path: "/stops.txt";
+    }
+
+    // default encoding as utf-8
+    block TextInterpreter oftype TextFileInterpreter {
+	}
+
+    block TableInterpreter oftype CSVInterpreter {
+        enclosing: '"';
+        enclosingEscape: '"';
+    }
+
+    
+    block TableColumnDeleter oftype ColumnDeleter {
+        // delete column that are in the instruccions
+        delete: [column B, column D, column H, column I, column J, column K, column L];
+    }
+
+	block GTFSTableInterpreter oftype TableInterpreter {
+		header: true;
+        columns: [
+			"stop_id" oftype integer,
+			"stop_name" oftype text,
+			"stop_lat" oftype CoordinatesType,
+			"stop_lon" oftype CoordinatesType,
+			"zone_id" oftype ZoneType,
+		];
+	}
+
+	block GTFSLoader oftype SQLiteLoader {
+		table: "stops";
+		file: "./gtfs.sqlite";
+	}
+
+    
+}
